@@ -46,18 +46,6 @@ Je suis Solal Diedhiou, un étudiant passionné par l'informatique et actuelleme
 - **Baccalauréat**
   - Spécialité Anglais LLCE et SES avec option Anglais Euro, base de mon intérêt pour les technologies et le développement.
 
-## Installation
-
-1. Clonez le dépôt :
-    ```bash
-    git clone https://github.com/SolalDFG/mon-site-web.git
-    ```
-2. Accédez au répertoire du projet :
-    ```bash
-    cd mon-site-web
-    ```
-3. Ouvrez le fichier `index.html` dans votre navigateur pour explorer le site localement.
-
 Merci de votre visite ! Explorez les différentes sections pour en savoir plus sur mon parcours et mes projets. Si vous avez des questions ou souhaitez me contacter, rendez-vous sur la page [Contact](contact.html).
 
 ## Liens
