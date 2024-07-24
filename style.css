@@ -42,7 +42,7 @@ header {
 }
 
 .menu-certification, .menu-projet {
-    display: flex; /* Utilisez flex pour aligner les éléments horizontalement */
+    display: flex; 
     align-items: center;
     list-style-type: none;
     padding: 0;
@@ -78,7 +78,7 @@ header {
 }
 
 .menu-projet {
-    margin-left: auto; /* Aligne les éléments du menu Projet à droite */
+    margin-left: auto; 
 }
 
 .menu-projet a {
@@ -90,10 +90,9 @@ header {
 }
 
 .menu-projet li {
-    margin-left: 1rem; /* Espacement entre les éléments du menu Projet */
+    margin-left: 1rem; 
 }
 
-/* Pour mobile */
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;
