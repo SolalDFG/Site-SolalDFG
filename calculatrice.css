@@ -20,12 +20,12 @@ header {
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 80px; /* Ajuste ce padding en fonction de la hauteur de votre header */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 130px); /* Ajuste la hauteur pour éviter les chevauchements */
 }
 
 .logo {
@@ -160,12 +160,12 @@ footer {
 }
 
 .calculatrice {
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     background-color: #eeeeee;
     border: 2px solid #CCCCCC;
-    margin: auto;
-    padding: 0;
+    margin-bottom: 2rem; /* Espace en bas pour éviter les chevauchements */
 }
 
 .calculatrice td {
@@ -197,12 +197,15 @@ footer {
 }
 
 .prcalculatrice {
-    margin: auto;
     text-align: center;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
+    main {
+        padding-top: 70px; /* Ajustement pour les écrans plus petits */
+    }
+
     .menu {
         flex-direction: column;
         align-items: flex-start;
@@ -232,7 +235,7 @@ footer {
     }
 
     .calculatrice {
-        width: 80%;
+        width: 90%;
         height: auto;
     }
 
