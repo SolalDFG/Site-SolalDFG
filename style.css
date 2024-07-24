@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    background-color: black;
+    color: #00ff00;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-bottom: 1px solid #00ff00;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 1000;
+
+}
+
+main{
+    padding-top: 80px;
+}
+
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.menu-certification, .menu-projet {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-certification li, .menu-projet li {
+    position: relative;
+}
+
+.menu-certification .sous-menu, .menu-projet .sous-menu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    border-radius: 5px;
+}
+
+.menu-certification li:hover .sous-menu, .menu-projet li:hover .sous-menu {
+    display: block;
+}
+
+.sous-menu li {
+    padding: 0.5rem 1rem;
+}
+
+.sous-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sous-menu li a:hover {
+    background-color: #30e830;
+}
+
+
+.presentation p {
+    line-height: 1.6;
+    margin: 0 5%;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #00ff00;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.clien-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clien {
+    display: flex;
+    background-color: #00ff00;
+    color: black;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+
+}
+
+.clien:hover {
+    background-color: #079d16;
+    transform: translate(4px, 4px);
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+.menu-projet {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-projet a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: black;
+}
+
+h2 {
+    text-align: center;
+}
