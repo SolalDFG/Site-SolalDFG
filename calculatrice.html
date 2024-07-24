@@ -2,9 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculatrice en JavaScript</title>
-    <script type="text/javascript" src="calculatrice.js" defer></script>
+    <title>Calculatrice en javascript</title>
+    <script type="text/javascript" src="calculatrice.js"></script>
     <link rel="stylesheet" media="screen, print, handheld" type="text/css" href="calculatrice.css" />
 </head>
 <body>
@@ -25,103 +24,108 @@
                 <li>
                     <a class="projet" href="projet.html">Projets</a>
                     <ul class="sous-menu">
-                        <li><a class="pcalculatrice" href="calculatrice.html">Calculatrice JS</a></li>
+                        <li><a class="pcalculatrice" href="calculatrice.html">Calculatrice JSS</a></li>
                         <li><a class="identification" href="projet-connection.html">Page Identification</a></li>
                     </ul>
                 </li>
             </ul>
             <a class="cv" href="cv.html">Mon CV</a>
-            <a class="contact" href="contact.html">Contact</a>
+            <a class="contact" href="contact.html">Contact</a> 
         </nav>
     </header>
     <main>
-        <div class="calculatrice-container">
-            <table class="calculatrice" id="calc">
-                <tr>
-                    <td colspan="4" class="calc_td_resultat">
-                        <input type="text" readonly="readonly" name="calc_resultat" id="calc_resultat" class="calc_resultat" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="ce">CE</button>
-                    </td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="nbs">&larr;</button>
-                    </td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="%">%</button>
-                    </td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="+">+</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="7">7</button>
-                    </td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="8">8</button>
-                    </td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="9">9</button>
-                    </td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="-">-</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="4">4</button>
-                    </td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="5">5</button>
-                    </td>
-                    <td class="calc_td_btn" data-action="6">6</td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="*">x</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="1">1</button>
-                    </td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="2">2</button>
-                    </td>
-                    <td class="calc_td_btn" data-action="3">3</td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="/">/</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="0">0</button>
-                    </td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="+-">&plusmn;</button>
-                    </td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action=".">,</button>
-                    </td>
-                    <td class="calc_td_btn">
-                        <button class="calc_btn" data-action="=">=</button>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="prcalculatrice">
-            <p>Cette calculatrice a été créée l'année dernière, durant ma première année de BTS SIO à Ingetis Paris.<br>
-               Ce projet m'a permis de mettre en pratique les compétences acquises en développement web, en intégrant des éléments HTML, CSS et JavaScript,<br>
-               pour concevoir une calculatrice fonctionnelle.</p>
-        </div>
+        <table class="calculatrice" id="calc">
+            <tr>
+                <td colspan="4" class="calc_td_resultat">
+                    <input type="text" readonly="readonly" name="calc_resultat" id="calc_resultat" class="calc_resultat" onkeydown="javascript:key_detect_calc('calc',event);" />
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="CE" onclick="javascript:f_calc('calc','ce');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="&larr;" onclick="javascript=f_calc('calc','nbs');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="%" onclick="javascript=f_calc('calc','%');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="+" onclick="javascript=f_calc('calc','+');" />
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="7" onclick="javascript=add_calc('calc',7);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="8" onclick="javascript=add_calc('calc',8);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="9" onclick="javascript=add_calc('calc',9);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="-" onclick="javascript=f_calc('calc','-');" />
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="4" onclick="javascript=add_calc('calc',4);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="5" onclick="javascript=add_calc('calc',5);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="6" onclick="javascript=add_calc('calc',6);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="x" onclick="javascript=f_calc('calc','*');" />
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="1" onclick="javascript=add_calc('calc',1);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="2" onclick="javascript=add_calc('calc',2);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="3" onclick="javascript=add_calc('calc',3);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="&divide;" onclick="javascript=f_calc('calc','');" />
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="0" onclick="javascript=add_calc('calc',0);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="&plusmn;" onclick="javascript=f_calc('calc','+-');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="," onclick="javascript=add_calc('calc','.');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="=" onclick="javascript=f_calc('calc','=');" />
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+                document.getElementById('calc').onload=initialiser_calc('calc');
+        </script>
+         <div class="prcalculatrice">
+         <p>Cette calculatrice a été créée l'année dernière, durant ma première année de BTS SIO à Ingetis Paris.<br>
+            Ce projet m'a permis de mettre en pratique les compétences acquises en développement web, en intégrant des éléments HTML, CSS et JavaScript,<br>
+            pour concevoir une calculatrice fonctionnelle.</p>
+            </div>
     </main>
     <footer>
         <div class="social">
-            <a class="lien" href="https://www.linkedin.com/in/solal-diedhiou-484975204/" target="_blank" aria-label="LinkedIn">
+            <a class="lien" href="https://www.linkedin.com/in/solal-diedhiou-484975204/" target="_blank">
                 <img class="link" src="images/linkedin.png" alt="Logo LinkedIn">
             </a>
-            <a class="lien" href="https://github.com/SolalDFG" target="_blank" aria-label="GitHub">
+            <a class="lien" href="https://github.com/SolalDFG" target="_blank">
                 <img class="git" src="images/github.png" alt="Logo GitHub">
             </a>
         </div>
@@ -130,17 +134,5 @@
             <a class="clien" href="contact.html" target="_blank">Contactez-moi</a>
         </div>
     </footer>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            const calc = document.getElementById('calc');
-            const buttons = calc.querySelectorAll('.calc_btn');
-            buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const action = this.getAttribute('data-action');
-                    f_calc('calc', action);
-                });
-            });
-        });
-    </script>
 </body>
 </html>
