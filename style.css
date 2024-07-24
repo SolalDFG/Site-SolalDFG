@@ -5,6 +5,22 @@ body {
     color: #00ff00;
 }
 
+main {
+    padding-top: 80px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.presentation p {
+    line-height: 1.6;
+    margin: 0 5%;
+}
+
+
 header {
     display: flex;
     justify-content: space-between;
@@ -19,32 +35,15 @@ header {
     z-index: 1000;
 }
 
-main {
-    padding-top: 80px;
-}
-
-.logo {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
 .menu {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.menu a {
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
 .menu-certification, .menu-projet {
-    position: relative;
+    display: flex; /* Utilisez flex pour aligner les éléments horizontalement */
+    align-items: center;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -68,23 +67,69 @@ main {
     display: block;
 }
 
-.sous-menu li {
-    padding: 0.5rem 1rem;
-}
-
-.sous-menu li a {
+.menu a {
+    background-color: black;
     color: white;
     text-decoration: none;
-    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
-.sous-menu li a:hover {
-    background-color: #30e830;
+.menu-projet {
+    margin-left: auto; /* Aligne les éléments du menu Projet à droite */
 }
 
-.presentation p {
-    line-height: 1.6;
-    margin: 0 5%;
+.menu-projet a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.menu-projet li {
+    margin-left: 1rem; /* Espacement entre les éléments du menu Projet */
+}
+
+/* Pour mobile */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-certification, .menu-projet {
+        display: block;
+        width: 100%;
+    }
+
+    .menu-certification li, .menu-projet li {
+        margin: 0;
+    }
+
+    .sous-menu {
+        position: static;
+        display: block;
+        width: 100%;
+        background-color: black;
+        padding: 0;
+    }
+
+    .sous-menu li {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .menu a {
+        font-size: 0.8rem;
+    }
 }
 
 footer {
@@ -132,73 +177,3 @@ footer {
     transition: 0.3s;
 }
 
-.menu-projet {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.menu-projet a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    background-color: black;
-}
-
-h2 {
-    text-align: center;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu a {
-        padding: 0.5rem;
-    }
-
-    .social {
-        flex-direction: column;
-    }
-
-    .social img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .clien {
-        padding: 0.3rem 0.6rem;
-    }
-
-    .presentation p {
-        margin: 0 2%;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    .menu a {
-        font-size: 0.8rem;
-    }
-
-    .social img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .clien {
-        font-size: 0.8rem;
-        padding: 0.2rem 0.5rem;
-    }
-
-    .presentation p {
-        margin: 0 1%;
-    }
-}
